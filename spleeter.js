@@ -65,7 +65,7 @@ const runSpleeter = (filename) => {
     output: path.join(__dirname, outputDir),
     model: path.join(__dirname, 'pretrained_models')
   }
-  const cmd = `docker run -v ${env.input}:/input -v ${env.output}:/output -v ${env.model}:/model -e MODEL_PATH=/model researchdeezer/spleeter:3.7 separate -i /input/audio_1.mp3 /input/audio_2.mp3 -o /output -p spleeter:4stems`
+  const cmd = `docker run -v "${env.input}":/input -v "${env.output}":/output -v "${env.model}":/model -e MODEL_PATH=/model researchdeezer/spleeter:3.7 separate -i /input/"${path.basename(filename)}" -o /output -p spleeter:4stems`
   Max.outlet('set', `Spleeter is running. This may take a minute...`)
 
   // Calls the spleeter python process
