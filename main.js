@@ -9,3 +9,7 @@ function bang () {
   const filePath = clip.get('file_path')
   outlet(0, 'onFile', filePath)
 }
+
+function spleeterDone (outputPath) {
+  log('spleeter done', outputPath)
+}
