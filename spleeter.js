@@ -3,6 +3,8 @@ const Max = require('max-api')
 const { exec } = require('child_process')
 const outputDir = 'output'
 
+let hasRun = false
+
 const main = () => {
   Max.post(`Loaded the ${path.basename(__filename)} script`)
   // Spleeter's default pip path may not be in Max Node's env path
@@ -19,9 +21,14 @@ Max.addHandlers({
       Max.post('No audio file found.')
       return
     }
-    Max.post(`Processing: ${filename}`)
+    if (hasRun) {
+      return
+    }
+    hasRun = true
+    Max.outlet('set', `Spleeter is running. This may take a minute...`)
     // Calls the spleeter python process
     exec(`spleeter separate -i "${filename}" -p spleeter:4stems -o ${outputDir}`, (err, stdout, stderr) => {
+      Max.outlet('set', 'Done!')
       if (err) {
         Max.post(`Error running Spleeter: ${err.message}`)
       }
@@ -62,7 +69,9 @@ const showDir = (dir) => {
   } else {
     Max.post(`Unsupported platform: ${process.platform}`)
   }
-  return exec(`${opener} "${dir}"`, (err) => {
+  exec(`${opener} "${dir}"`, (err) => {
     Max.post(`Error opening output directory: ${err.message}`)
   })
+  Max.outlet('set', `Select a clip and press the button to start.`)
+  Max.outlet('spleeterDone')
 }
