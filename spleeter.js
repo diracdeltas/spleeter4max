@@ -65,8 +65,9 @@ const runSpleeter = (filename) => {
     output: path.join(__dirname, outputDir),
     model: path.join(__dirname, 'pretrained_models')
   }
-  const cmd = `docker run -v "${env.input}":/input -v "${env.output}":/output -v "${env.model}":/model -e MODEL_PATH=/model researchdeezer/spleeter:3.7 separate -i /input/"${path.basename(filename)}" -o /output -p spleeter:4stems`
+  const cmd = `docker run -v "${env.input}":/input -v "${env.output}":/output -v "${env.model}":/model -e MODEL_PATH=/model researchdeezer/spleeter:3.7 separate -i "/input/${path.basename(filename)}" -o /output -p spleeter:4stems`
   Max.outlet('set', `Spleeter is running. This may take a minute...`)
+  Max.post(cmd)
 
   // Calls the spleeter python process
   exec(cmd, (err, stdout, stderr) => {
@@ -80,11 +81,13 @@ const runSpleeter = (filename) => {
     if (stdout) {
       Max.post(`Spleeter stdout: ${stdout}`)
     }
+    const correctFilename = path.basename(filename).split('.').slice(0, -1).join('.')
+    // TODO: rename the output directory to the correct filename
     if (!err) {
       showDir(path.join(
         __dirname,
         outputDir,
-        path.basename(filename).split('.').slice(0, -1).join('.')
+        `('${correctFilename}', '${path.extname(filename)}')`
       ))
     }
   })
