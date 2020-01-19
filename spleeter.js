@@ -7,7 +7,7 @@ let hasRun = false
 
 const main = () => {
   Max.post(`Loaded the ${path.basename(__filename)} script`)
-  // Spleeter's default pip path may not be in Max Node's env path
+  // Docker's default path may not be in Max Node's env path
   process.env.PATH = [process.env.PATH, '/usr/local/bin'].join(':')
   Max.outlet('bang')
 }
@@ -25,36 +25,7 @@ Max.addHandlers({
       return
     }
     hasRun = true
-    Max.outlet('set', `Spleeter is running. This may take a minute...`)
-    // Calls the spleeter python process
-    exec(`spleeter separate -i "${filename}" -p spleeter:4stems -o ${outputDir}`, (err, stdout, stderr) => {
-      Max.outlet('set', 'Done!')
-      if (err) {
-        Max.post(`Error running Spleeter: ${err.message}`)
-      }
-      if (stderr) {
-        Max.post(`Spleeter stderr: ${stderr}`)
-      }
-      if (stdout) {
-        Max.post(`Spleeter stdout: ${stdout}`)
-      }
-      if (!err) {
-        showDir(path.join(
-          __dirname,
-          outputDir,
-          path.basename(filename).split('.').slice(0, -1).join('.')
-        ))
-        /*
-        stemFilenames.forEach((name) => {
-          Max.outlet('spleeterDone', path.join(
-            __dirname,
-            outputDir,
-            path.basename(filename).split('.').slice(0, -1).join('.'),
-            name))
-        })
-        */
-      }
-    })
+    startDocker(filename)
   }
 })
 
@@ -72,6 +43,49 @@ const showDir = (dir) => {
   exec(`${opener} "${dir}"`, (err) => {
     Max.post(`Error opening output directory: ${err.message}`)
   })
-  Max.outlet('set', `Select a clip and press the button to start.`)
+  Max.outlet('set', `Highlight a clip; then press the button to start.`)
   Max.outlet('spleeterDone')
+}
+
+const startDocker = (filename) => {
+  Max.outlet('set', `Checking for Docker updates...`)
+  exec('docker pull researchdeezer/spleeter:3.7', (err) => {
+    if (err) {
+      Max.outlet('set', `Could not run Docker. Please read README.md.`)
+      Max.post(`Error running docker pull: ${err.message}`)
+    } else {
+      runSpleeter(filename)
+    }
+  })
+}
+
+const runSpleeter = (filename) => {
+  const env = {
+    input: path.dirname(filename),
+    output: path.join(__dirname, outputDir),
+    model: path.join(__dirname, 'pretrained_models')
+  }
+  const cmd = `docker run -v ${env.input}:/input -v ${env.output}:/output -v ${env.model}:/model -e MODEL_PATH=/model researchdeezer/spleeter:3.7 separate -i /input/audio_1.mp3 /input/audio_2.mp3 -o /output -p spleeter:4stems`
+  Max.outlet('set', `Spleeter is running. This may take a minute...`)
+
+  // Calls the spleeter python process
+  exec(cmd, (err, stdout, stderr) => {
+    if (err) {
+      Max.post(`Error running Spleeter: ${err.message}`)
+      Max.outlet('set', 'Spleeter could not run :(')
+    }
+    if (stderr) {
+      Max.post(`Spleeter stderr: ${stderr}`)
+    }
+    if (stdout) {
+      Max.post(`Spleeter stdout: ${stdout}`)
+    }
+    if (!err) {
+      showDir(path.join(
+        __dirname,
+        outputDir,
+        path.basename(filename).split('.').slice(0, -1).join('.')
+      ))
+    }
+  })
 }
