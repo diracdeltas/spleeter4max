@@ -35,9 +35,7 @@ const showDir = (dir) => {
   } else {
     Max.post(`Unsupported platform: ${process.platform}`)
   }
-  exec(`${opener} "${dir}"`, (err) => {
-    Max.post(`Error opening output directory: ${err.message}`)
-  })
+  execSync(`${opener} "${dir}"`)
   Max.outlet('set', `Highlight a clip; then press the button to start.`)
 }
 
