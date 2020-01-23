@@ -1,2 +1,5 @@
 output/
 pretrained_models/
+.DS_Store
+spleeter/
+*.zip
