@@ -2,6 +2,8 @@
 
 ableton max device for separating a clip into stems (vocals, bass, drums, other).
 
+video tutorial: https://youtu.be/4pcJoI5CUOA
+
 ## before you start
 
 you need to install Docker by downloading it from:
@@ -48,3 +50,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## credits
+
+https://github.com/deezer/spleeter
