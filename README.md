@@ -4,6 +4,8 @@ ableton max device for separating a clip into stems (vocals, bass, drums, other)
 
 video tutorial: https://youtu.be/4pcJoI5CUOA
 
+download the latest build: https://github.com/diracdeltas/spleeter4max/releases/
+
 ## before you start
 
 you need to install Docker by downloading it from:
@@ -20,7 +22,7 @@ once downloaded:
 
 ## running
 
-1. unzip and add the `spleeter/` folder to your Places menu in Ableton
+1. unzip spleeter.zip and add the `spleeter/` folder to your Places menu in Ableton
 2. put `spleeter.amxd` onto any audio channel
 3. select any audio clip in Ableton by clicking on it
 4. press the start button in the spleeter device and wait. the first run may take a long time!
