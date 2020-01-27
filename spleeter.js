@@ -1,7 +1,6 @@
 const path = require('path')
 const Max = require('max-api')
 const { exec, execSync } = require('child_process')
-const outputDir = 'output'
 const done = () => {
   Max.outlet('spleeterDone')
 }
@@ -48,7 +47,7 @@ const startDocker = (filename) => {
     Max.post(`Warning: ${e.message}`)
     exec('docker pull researchdeezer/spleeter:3.7', (err) => {
       if (err) {
-        Max.outlet('set', `Could not run Docker. Please read README.md.`)
+        Max.outlet('set', `Could not run Docker. Please read README.txt`)
         Max.post(`Error running docker pull: ${err.message}`)
         done()
       } else {
@@ -83,7 +82,7 @@ const runSpleeterDocker = (filename) => {
     }
     const correctFilename = path.basename(filename).split('.').slice(0, -1).join('.')
     const incorrectFilename = `('${correctFilename}', '${path.extname(filename)}')`
-    const outputFilename = path.join(__dirname, outputDir, correctFilename)
+    const outputFilename = path.join(__dirname, correctFilename)
     Max.post('Running docker cp...')
     exec(`docker cp spleeter:"/output/${incorrectFilename}/" "${outputFilename}"`, (err, stdout, stderr) => {
       if (err) {
