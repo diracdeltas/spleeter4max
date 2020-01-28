@@ -42,19 +42,18 @@ const startDocker = (filename) => {
   Max.outlet('set', 'Starting Docker...')
   try {
     execSync('docker container rm spleeter')
-    runSpleeterDocker(filename)
   } catch (e) {
     Max.post(`Warning: ${e.message}`)
-    exec('docker pull researchdeezer/spleeter:3.7', (err) => {
-      if (err) {
-        Max.outlet('set', `Could not run Docker. Please read README.txt`)
-        Max.post(`Error running docker pull: ${err.message}`)
-        done()
-      } else {
-        runSpleeterDocker(filename)
-      }
-    })
   }
+  exec('docker pull researchdeezer/spleeter@sha256:e46b042c25781c8ef041847d9615d799b3fa76d56a653ece0d0e2585067153a2', (err) => {
+    if (err) {
+      Max.outlet('set', `Could not run Docker. Please read README.txt`)
+      Max.post(`Error running docker pull: ${err.message}`)
+      done()
+    } else {
+      runSpleeterDocker(filename)
+    }
+  })
 }
 
 const runSpleeterDocker = (filename) => {
@@ -81,10 +80,9 @@ const runSpleeterDocker = (filename) => {
       Max.post(`Spleeter stdout: ${stdout}`)
     }
     const correctFilename = path.basename(filename).split('.').slice(0, -1).join('.')
-    const incorrectFilename = `('${correctFilename}', '${path.extname(filename)}')`
     const outputFilename = path.join(__dirname, correctFilename)
     Max.post('Running docker cp...')
-    exec(`docker cp spleeter:"/output/${incorrectFilename}/" "${outputFilename}"`, (err, stdout, stderr) => {
+    exec(`docker cp spleeter:"/output/${correctFilename}/" "${outputFilename}"`, (err, stdout, stderr) => {
       if (err) {
         Max.post(`Error running docker cp: ${err.message}`)
         Max.outlet('set', `Could not copy files from Docker.`)
