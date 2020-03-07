@@ -8,12 +8,10 @@ download the latest build: https://github.com/diracdeltas/spleeter4max/releases/
 
 ## before you start
 
-you need to install Docker by downloading it from:
+install Docker from https://www.docker.com/products/docker-desktop (it's
+free!).
 
-* mac: https://download.docker.com/mac/stable/Docker.dmg
-* windows: https://download.docker.com/win/stable/Docker%20Desktop%20Installer.exe
-
-once downloaded:
+once Docker is installed:
 
 1. run the Docker application.
 2. in `Preferences > Advanced`, set Memory to the maximum possible value or at least 16GB, sometimes 32GB.
