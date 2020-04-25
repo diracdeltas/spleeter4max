@@ -120,7 +120,10 @@ remember to start it before you run spleeter.
 
 ## support
 
-spleeter@azuki.vip
+email: spleeter@azuki.vip. want a higher chance of getting a response? you can
+make a donation via
+[bandcamp](https://azuki.bandcamp.com/merch/max-for-live-stem-splitter) and
+mention it in your email!
 
 ## license (MIT)
 
