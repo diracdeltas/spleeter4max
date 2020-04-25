@@ -28,7 +28,7 @@ once Docker is installed:
 3. select any audio clip in Ableton by clicking on it
 4. press the start button in the spleeter device and wait. the first run may take a long time!
 
-## troubleshooting
+## troubleshooting and FAQs
 
 ### spleeter seems to take forever to run
 
@@ -69,6 +69,11 @@ see Step 3 of https://github.com/diracdeltas/spleeter4max#before-you-start.
 this often happens if you are loading files from a different hard drive or
 audio files outside your home folder.
 
+### can i run this if i have less than 16GB of memory?
+
+yes, as long as your audio files are short enough. if you get an error, try
+splitting your audio file in half.
+
 ### spleeter says docker could not run
 
 check that docker is running in your taskbar or task manager. if it's running,
@@ -97,6 +102,21 @@ try opening up the max console in order to get more useful error messages. instr
 2. if you have a python environment set up, you could install the original
    spleeter library from https://pypi.org/project/spleeter/. there is no
    Ableton integration but that is something i have considered doing.
+
+### can i run this in other DAWs?
+
+unfortunately no
+
+### docker is not compatible with my operating system
+
+sorry. i may at some point add a feature to run it using a native spleeter
+install, but that would require people to have a pip/python environment.
+
+### can i stop docker?
+
+yes, you can quit docker after spleeter is done. also i would turn off the
+docker setting that automatically starts it when you start your computer. just
+remember to start it before you run spleeter.
 
 ## support
 
