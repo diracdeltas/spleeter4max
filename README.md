@@ -78,7 +78,16 @@ docker](https://stackoverflow.com/questions/49387263/docker-error-response-from-
 
 ### help! it's still not working.
 
-try opening up the max console in order to get more useful error messages.
+try opening up the max console in order to get more useful error messages. instructions:
+
+1. click on the rectangle icon in Spleeter to open max
+<img width="214" alt="Screen Shot 2020-04-24 at 11 32 46 PM" src="https://user-images.githubusercontent.com/549654/80273255-7a5e6380-8685-11ea-8110-bf62b6265bb4.png">
+
+2. make sure the lock icon is set to locked. click the hamburger menu icon to open the max console.
+<img width="574" alt="Screen Shot 2020-04-24 at 11 34 03 PM" src="https://user-images.githubusercontent.com/549654/80273260-864a2580-8685-11ea-83e2-72fc0e49090b.png">
+
+3. click the button to run spleeter. you should see a bunch of console messages.
+<img width="663" alt="Screen Shot 2020-04-24 at 11 35 04 PM" src="https://user-images.githubusercontent.com/549654/80273267-919d5100-8685-11ea-9453-bfd2c7cc4f6a.png">
 
 ### i know how to run terminal commands. any other debugging tips?
 
