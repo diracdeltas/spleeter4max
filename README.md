@@ -9,6 +9,8 @@ https://www.dropbox.com/s/cn90sqpx3cuzttb/spleeter.zip?dl=0
 
 ## before you start
 
+note: if you already have the spleeter python library installed, you can use [spleeter for max native](https://github.com/diracdeltas/spleeter4max/releases/tag/1.3-native), which will use the python library instead of docker. skip the steps below. 
+
 install Docker from https://www.docker.com/products/docker-desktop (it's
 free!).
 
