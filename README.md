@@ -44,6 +44,8 @@ once you're done, you can quit docker, but make sure to start it again the next 
 
 did you already do the steps in https://github.com/diracdeltas/spleeter4max#before-you-start? if so keep reading.
 
+unfortunately this plugin may not work with ableton 9 or earlier :(.
+
 ### spleeter seems to take forever to run
 
 the first time spleeter runs, it needs to download a virtual machine. on slow
