@@ -21,14 +21,28 @@ once Docker is installed:
    `Settings > Resources > File Sharing` if you are loading samples from
    outside your home directory.
 
+## system requirements
+
+* Windows 10 64-bit: Pro, Enterprise, or Education; must be able to enable Hyper-V and Containers Windows features
+* Mac hardware must be a 2010 or a newer model / macOS must be version 10.13 or newer
+* At least 8GB, preferably at least 16GB of RAM
+* Ableton 10 and Max for Live. (May work on Ableton 9 but I haven't tested it.)
+
 ## running
 
 1. unzip spleeter.zip and add the `spleeter/` folder to your Places menu in Ableton
 2. put `spleeter.amxd` onto any audio channel
 3. select any audio clip in Ableton by clicking on it
-4. press the start button in the spleeter device and wait. the first run may take a long time!
+4. make sure docker is running.
+5. press the start button in the spleeter device and wait. the first run may take a long time!
+
+once you're done, you can quit docker, but make sure to start it again the next time you want to run spleeter.
 
 ## troubleshooting and FAQs
+
+### this plugin doesn't run
+
+did you already do the steps in https://github.com/diracdeltas/spleeter4max#before-you-start? if so keep reading.
 
 ### spleeter seems to take forever to run
 
