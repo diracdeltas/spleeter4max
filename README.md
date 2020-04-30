@@ -26,7 +26,7 @@ once Docker is installed:
 * Windows 10 64-bit: Pro, Enterprise, or Education; must be able to enable Hyper-V and Containers Windows features
 * Mac hardware must be a 2010 or a newer model / macOS must be version 10.13 or newer
 * At least 8GB, preferably at least 16GB of RAM
-* Ableton 10 and Max for Live. (May work on Ableton 9 but I haven't tested it.)
+* Ableton 10 and Max for Live 8. (May work on earlier versions but I haven't tried it.)
 
 ## running
 
@@ -44,7 +44,7 @@ once you're done, you can quit docker, but make sure to start it again the next 
 
 did you already do the steps in https://github.com/diracdeltas/spleeter4max#before-you-start? if so keep reading.
 
-unfortunately this plugin may not work with ableton 9 or earlier :(.
+unfortunately this plugin may not work with versions earlier than Ableton 10 / Max 8 :(.
 
 ### spleeter seems to take forever to run
 
