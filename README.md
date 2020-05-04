@@ -118,8 +118,7 @@ try opening up the max console in order to get more useful error messages. instr
    happens:
    https://github.com/diracdeltas/spleeter4max/blob/241ccc291d915c0b82f601948f6989ccefaeffa9/spleeter.js#L64O
 2. if you have a python environment set up, you could install the original
-   spleeter library from https://pypi.org/project/spleeter/. there is no
-   Ableton integration but that is something i have considered doing.
+   spleeter library from https://pypi.org/project/spleeter/ and use [spleeter for max native](https://github.com/diracdeltas/spleeter4max/releases/tag/1.3-native) instead, which will use the python installation.
 
 ### can i run this in other DAWs?
 
