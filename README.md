@@ -7,11 +7,22 @@ https://www.dropbox.com/s/cn90sqpx3cuzttb/spleeter.zip?dl=0 instead.
 
 ## before you start
 
-make sure you have Python 2 >=2.7.9 or Python 3 >=3.4 from
-https://www.python.org/downloads/.
+### windows steps:
 
-then simply open a terminal and type `pip install spleeter` or `pip3 install
-spleeter` to install Deezer's spleeter package.
+1. install ffmpeg following the instructions in https://github.com/adaptlearning/adapt_authoring/wiki/Installing-FFmpeg#installing-ffmpeg-in-windows
+2. install python 3.7 from https://www.python.org/downloads/release/python-377/ and disable the "path length variable limit" option when you get to the end of the install process
+3. open windows environment variable editor and remove `.JS;` from PATHEXT (https://support.shotgunsoftware.com/hc/en-us/articles/114094235653-Setting-global-environment-variables-on-Windows)
+4. open CMD.exe and type `pip install spleeter`
+
+### macOS steps:
+
+1. install homebrew: https://brew.sh/
+2. open terminal and install python/ffmpeg/spleeter with the following commands:
+```
+brew install python
+brew install ffmpeg
+pip3 install spleeter
+```
 
 ## running
 
