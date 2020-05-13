@@ -24,6 +24,8 @@ brew install ffmpeg
 pip3 install spleeter
 ```
 
+note: spleeter currently requires python 3.7
+
 ## running
 
 1. unzip spleeter-native.zip and add the `spleeter-native/` folder to your Places menu in Ableton
