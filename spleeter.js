@@ -47,6 +47,9 @@ const runSpleeter = (filename) => {
   exec(cmd, (err, stdout, stderr) => {
     if (err) {
       Max.outlet('set', `Error: ${err.message}`)
+      Max.post(`Error: ${err.message}`)
+      Max.post(`Spleeter stderr: ${stderr}`)
+      Max.post(`Spleeter stdout: ${stdout}`)
       done()
       return
     }
