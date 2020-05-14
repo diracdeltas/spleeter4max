@@ -39,6 +39,16 @@ note: spleeter currently requires python 3.7
 
 try splitting your input audio into shorter pieces.
 
+### 'pip(3) install spleeter' is failing
+
+try `python -m pip install spleeter` or `python3 -m pip install spleeter` to see if that works for some reason.
+
+open terminal/CMD.exe and type `pip --version` or `pip3 --version` to make sure you have the version with python 3.7. if not, you need to install python 3.7 with the instructions above.
+
+you could also try https://pypi.org/help/#tls-deprecation to get some more useful error messages.
+
+it's possible the issue is pip needs to be upgraded, which can be done using https://stackoverflow.com/questions/49748063/pip-install-fails-for-every-package-could-not-find-a-version-that-satisfies.
+
 ### it not working and i can't figure out why
 
 try opening up the max console in order to get more useful error messages. instructions:
