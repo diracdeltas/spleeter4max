@@ -4,7 +4,7 @@ ableton max device for separating a clip into stems (vocals, bass, drums, other)
 
 video tutorial: https://youtu.be/4pcJoI5CUOA
 
-download the device:
+download:
 https://www.dropbox.com/s/cn90sqpx3cuzttb/spleeter.zip?dl=0
 
 ## before you start
@@ -142,7 +142,7 @@ you could try opening a terminal and doing this manually: `docker pull researchd
 
 ### spleeter ends with 'could not copy files from docker'
 
-this could be due to an issue fixed in late january of 2020, so if you downloaded it prior to then, try re-downloading from the dropbox link above (and delete the old plugin).
+this could be due to an issue fixed in late january of 2020, so if you downloaded it prior to then, try re-downloading from the dropbox link above (and delete the old plugin) or from https://github.com/diracdeltas/spleeter4max/releases/tag/1.2.
 
 ## support
 
