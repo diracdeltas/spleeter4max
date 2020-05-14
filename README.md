@@ -5,8 +5,7 @@ ableton max device for separating a clip into stems (vocals, bass, drums, other)
 video tutorial: https://youtu.be/4pcJoI5CUOA
 
 download link:
-https://www.dropbox.com/s/cn90sqpx3cuzttb/spleeter.zip?dl=0
-backup download link: https://github.com/diracdeltas/spleeter4max/releases/download/1.2/spleeter.zip
+https://www.dropbox.com/s/cn90sqpx3cuzttb/spleeter.zip?dl=0 (backup download link: https://github.com/diracdeltas/spleeter4max/releases/download/1.2/spleeter.zip)
 
 ## before you start
 
