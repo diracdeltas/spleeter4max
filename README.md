@@ -4,7 +4,7 @@ ableton max device for separating a clip into stems (vocals, bass, drums, other)
 
 video tutorial: https://youtu.be/4pcJoI5CUOA
 
-download the latest build:
+download the device:
 https://www.dropbox.com/s/cn90sqpx3cuzttb/spleeter.zip?dl=0
 
 ## before you start
@@ -126,14 +126,23 @@ unfortunately no
 
 ### docker is not compatible with my operating system
 
-sorry. i may at some point add a feature to run it using a native spleeter
-install, but that would require people to have a pip/python environment.
+try https://github.com/diracdeltas/spleeter4max/releases/tag/1.3-native instead
 
 ### can i stop docker?
 
 yes, you can quit docker after spleeter is done. also i would turn off the
 docker setting that automatically starts it when you start your computer. just
 remember to start it before you run spleeter.
+
+### spleeter seems to show 'starting docker' forever
+
+this usually takes a long time when you run it for the first time, especially on slow networks, since it's downloading the VM. it might take several minutes and a few retries for the first time. if this actually seems to hang indefinitely, something on your network might be blocking the download.
+
+you could try opening a terminal and doing this manually: `docker pull researchdeezer/spleeter@sha256:e46b042c25781c8ef041847d9615d799b3fa76d56a653ece0d0e2585067153a2`. if this succeeds, the spleeter max device won't try to download it anymore.
+
+### spleeter ends with 'could not copy files from docker'
+
+this could be due to an issue fixed in late january of 2020, so if you downloaded it prior to then, try re-downloading from the dropbox link above (and delete the old plugin).
 
 ## support
 
