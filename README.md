@@ -34,7 +34,7 @@ once Docker is installed:
 
 1. unzip spleeter.zip and add the `spleeter/` folder to your Places menu in Ableton
 2. put `spleeter.amxd` onto any audio channel
-3. select any audio clip in Ableton by clicking on it
+3. select any audio clip in Ableton by clicking on it (don't just highlight a segment)
 4. make sure docker is running.
 5. press the start button in the spleeter device and wait. the first run may take a long time!
 
@@ -47,6 +47,10 @@ once you're done, you can quit docker, but make sure to start it again the next 
 did you already do the steps in https://github.com/diracdeltas/spleeter4max#before-you-start? if so keep reading.
 
 unfortunately this plugin may not work with versions earlier than Ableton 10 / Max 8 :(.
+
+## the start button disappears, then nothing happens
+
+this may be because spleeter can't find what it's supposed to be splitting in the Ableton session. **you need to select an entire audio clip, not just highlight part of it.** to split an audio clip into a shorter segment, click on a point in the clip, press cmd or ctrl+e to split, then right-click and consolidate.
 
 ### spleeter seems to take forever to run
 
