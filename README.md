@@ -9,9 +9,9 @@ https://www.dropbox.com/s/cn90sqpx3cuzttb/spleeter.zip?dl=0 (backup download lin
 
 ## before you start
 
-note: if you already have the spleeter python library installed, you can use [spleeter for max native](https://github.com/diracdeltas/spleeter4max/releases/tag/1.3-native), which will use the python library instead of docker. skip the steps below. 
+if you would rather install python/pip/ffmpeg than docker, it's better to use [spleeter for max native](https://github.com/diracdeltas/spleeter4max/releases/tag/1.3-native), which is faster and takes less RAM. after downloading spleeter-native, skip the rest of the instructions and go to https://github.com/diracdeltas/spleeter4max/blob/feature/native-spleeter/README.md#before-you-start instead.
 
-install Docker from https://www.docker.com/products/docker-desktop (it's
+otherwise install Docker from https://www.docker.com/products/docker-desktop (it's
 free!).
 
 once Docker is installed:
