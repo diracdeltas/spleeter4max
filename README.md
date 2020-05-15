@@ -48,7 +48,7 @@ did you already do the steps in https://github.com/diracdeltas/spleeter4max#befo
 
 unfortunately this plugin may not work with versions earlier than Ableton 10 / Max 8 :(.
 
-## the start button disappears, then nothing happens
+### the start button disappears, then nothing happens
 
 this may be because spleeter can't find what it's supposed to be splitting in the Ableton session. **you need to select an entire audio clip, not just highlight part of it.** to split an audio clip into a shorter segment, click on a point in the clip, press cmd or ctrl+e to split, then right-click and consolidate.
 
