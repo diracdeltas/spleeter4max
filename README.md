@@ -54,6 +54,16 @@ you could also try https://pypi.org/help/#tls-deprecation to get some more usefu
 
 it's possible the issue is pip needs to be upgraded, which can be done using https://stackoverflow.com/questions/49748063/pip-install-fails-for-every-package-could-not-find-a-version-that-satisfies.
 
+## spleeter fails with command not found even though it works on command line
+
+this might be because spleeter is not installed in a path that Max recognizes. on MacOS try entering this in terminal:
+
+```
+ln -s $(which spleeter) /usr/local/bin/spleeter
+```
+
+TODO: figure out what the equivalent is for windows
+
 ### it not working and i can't figure out why
 
 try opening up the max console in order to get more useful error messages. instructions:
