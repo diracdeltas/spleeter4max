@@ -144,6 +144,8 @@ you could try opening a terminal and doing this manually: `docker pull researchd
 
 this could be due to an issue fixed in late january of 2020, so if you downloaded it prior to then, try re-downloading from the dropbox link above (and delete the old plugin) or from https://github.com/diracdeltas/spleeter4max/releases/download/1.2/spleeter.zip.
 
+another possible solution is to copy the audio files you are splitting into the spleeter folder.
+
 ## support
 
 email: spleeter@azuki.vip. want a higher chance of getting a response? you can
