@@ -23,6 +23,10 @@ brew install python
 brew install ffmpeg
 pip3 install spleeter
 ```
+3. on some versions of MacOS, spleeter gets installed somewhere other than `/usr/local/bin/spleeter`. you can check this by typing `which spleeter` into the terminal. if this is the case, enter this into the terminal to fix the location:
+```
+ln -s $(which spleeter) /usr/local/bin/spleeter
+```
 
 note: spleeter currently requires python 3.7
 
