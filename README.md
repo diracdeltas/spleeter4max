@@ -3,9 +3,11 @@
 ableton max device for separating a clip into stems (vocals, bass, drums,
 other) **using an existing installation of spleeter**. if you aren't able to
 install spleeter, check out
-https://www.dropbox.com/s/cn90sqpx3cuzttb/spleeter.zip?dl=0 instead.
+https://www.dropbox.com/s/cn90sqpx3cuzttb/spleeter.zip?dl=0 instead for the version that uses docker.
 
 ## before you start
+
+note that all instructions were tested with Max 8.1 and may not work for earlier versions of Max.
 
 ### windows steps:
 
