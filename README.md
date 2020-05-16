@@ -95,10 +95,10 @@ unfortunately not right now
 
 ## support
 
-email: spleeter@azuki.vip. want a higher chance of getting a response? you can
+please open an issue at https://github.com/diracdeltas/spleeter4max/issues. want a higher chance of getting a response? you can
 make a donation via
 [bandcamp](https://azuki.bandcamp.com/merch/max-for-live-stem-splitter) and
-mention it in your email!
+mention it in the issue!
 
 ## license (MIT)
 
