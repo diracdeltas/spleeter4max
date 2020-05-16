@@ -3,7 +3,7 @@
 ableton max device for separating a clip into stems (vocals, bass, drums,
 other) **using an existing installation of spleeter**. if you aren't able to
 install spleeter, check out
-https://www.dropbox.com/s/cn90sqpx3cuzttb/spleeter.zip?dl=0 instead for the version that uses docker.
+https://github.com/diracdeltas/spleeter4max#spleeter-for-max instead for the version that uses docker.
 
 ## before you start
 
@@ -12,9 +12,11 @@ note that all instructions were tested with Max 8.1 and may not work for earlier
 ### windows steps:
 
 1. install ffmpeg following the instructions in https://github.com/adaptlearning/adapt_authoring/wiki/Installing-FFmpeg#installing-ffmpeg-in-windows
-2. install python 3.7 from https://www.python.org/downloads/release/python-377/ and disable the "path length variable limit" option when you get to the end of the install process
+2. install **python 3.7** from https://www.python.org/downloads/release/python-377/ and disable the "path length variable limit" option when you get to the end of the install process
 3. open windows environment variable editor and remove `.JS;` from PATHEXT (https://support.shotgunsoftware.com/hc/en-us/articles/114094235653-Setting-global-environment-variables-on-Windows)
 4. open CMD.exe and type `pip install spleeter`
+
+to test the install, run `spleeter -h` in CMD.exe. it should show you usage instructions. if not, you may need to [set spleeter to run as administrator](https://github.com/diracdeltas/spleeter4max/issues/7).
 
 ### macOS steps:
 
@@ -30,7 +32,7 @@ pip3 install spleeter
 ln -s $(which spleeter) /usr/local/bin/spleeter
 ```
 
-note: spleeter currently requires python 3.7
+note: spleeter currently requires **python 3.7** (3.8 will not work)
 
 ## running
 
@@ -44,6 +46,8 @@ note: spleeter currently requires python 3.7
 ### spleeter seems to take forever to run
 
 try splitting your input audio into shorter pieces.
+
+on windows, if it hangs for more than a few minutes, this might indicate that you [need to run spleeter as administrator](https://github.com/diracdeltas/spleeter4max/issues/7).
 
 ### the start button disappears, then nothing happens
 
@@ -60,7 +64,7 @@ you could also try https://pypi.org/help/#tls-deprecation to get some more usefu
 
 it's possible the issue is pip needs to be upgraded, which can be done using https://stackoverflow.com/questions/49748063/pip-install-fails-for-every-package-could-not-find-a-version-that-satisfies.
 
-## spleeter fails with command not found even though it works on command line
+## spleeter fails with command not found
 
 this might be because spleeter is not installed in a path that Max recognizes. on MacOS try entering this in terminal:
 
@@ -68,7 +72,7 @@ this might be because spleeter is not installed in a path that Max recognizes. o
 ln -s $(which spleeter) /usr/local/bin/spleeter
 ```
 
-TODO: figure out what the equivalent is for windows
+on Windows, you might need to go to `C:\Program Files\Python37\Scripts`, right click on spleeter, select Properties, and under Compatibility enable `Run this program as an administrator` (https://github.com/diracdeltas/spleeter4max/issues/7). 
 
 ### it not working and i can't figure out why
 
