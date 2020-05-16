@@ -17,7 +17,7 @@ free!).
 once Docker is installed:
 
 1. run the Docker application.
-2. in `Preferences > Advanced`, set Memory to the maximum possible value or at least 16GB, sometimes 32GB.
+2. in `Preferences > Advanced`, set Memory to the maximum possible value or at least 8GB
 3. on Windows, you will need to select the drives that you will load samples
    from in `Settings > Shared Drives`. on Mac, you may need to do this in
    `Settings > Resources > File Sharing` if you are loading samples from
