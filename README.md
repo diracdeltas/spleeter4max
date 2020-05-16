@@ -42,6 +42,10 @@ once you're done, you can quit docker, but make sure to start it again the next 
 
 ## troubleshooting and FAQs
 
+### can i run this if i have Windows Home?
+
+i haven't tried it but apparently you can at least run docker if you opt into the latest Windows Insider builds. see https://www.docker.com/blog/docker-desktop-for-windows-home-is-here/.
+
 ### this plugin doesn't run
 
 did you already do the steps in https://github.com/diracdeltas/spleeter4max#before-you-start? if so keep reading.
