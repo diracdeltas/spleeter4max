@@ -13,7 +13,7 @@ note that all instructions were tested with Max 8.1 and may not work for earlier
 
 1. install ffmpeg following the instructions in https://github.com/adaptlearning/adapt_authoring/wiki/Installing-FFmpeg#installing-ffmpeg-in-windows
 2. install **python 3.7** from https://www.python.org/downloads/release/python-377/ and disable the "path length variable limit" option when you get to the end of the install process
-3. open windows environment variable editor and remove `.JS;` from PATHEXT (https://support.shotgunsoftware.com/hc/en-us/articles/114094235653-Setting-global-environment-variables-on-Windows)
+3. open windows environment variable editor and remove `.JS;` from PATHEXT (https://support.shotgunsoftware.com/hc/en-us/articles/114094235653-Setting-global-environment-variables-on-Windows). on some systems you may need to restart for these changes to take effect.
 4. open CMD.exe and type `pip install spleeter`
 
 to test the install, run `spleeter -h` in CMD.exe. it should show you usage instructions. if not, you may need to [set spleeter to run as administrator](https://github.com/diracdeltas/spleeter4max/issues/7) or try [the instructions in this thread](https://github.com/diracdeltas/spleeter4max/issues/8).
@@ -79,6 +79,10 @@ if it's still not working on Windows, see advice in https://github.com/diracdelt
 ### max console says it can't find a .js file
 
 make sure spleeter-native.amxd is in the spleeter-native directory. it cannot be moved out of this directory or else it will break, but you can move the entire directory.
+
+### windows throws a jscript error when i click start
+
+you may need to restart your computer, assuming you already did step 3 in https://github.com/diracdeltas/spleeter4max/tree/feature/native-spleeter#windows-steps.
 
 ### it not working and i can't figure out why
 
