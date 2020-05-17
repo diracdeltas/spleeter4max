@@ -16,7 +16,7 @@ note that all instructions were tested with Max 8.1 and may not work for earlier
 3. open windows environment variable editor and remove `.JS;` from PATHEXT (https://support.shotgunsoftware.com/hc/en-us/articles/114094235653-Setting-global-environment-variables-on-Windows)
 4. open CMD.exe and type `pip install spleeter`
 
-to test the install, run `spleeter -h` in CMD.exe. it should show you usage instructions. if not, you may need to [set spleeter to run as administrator](https://github.com/diracdeltas/spleeter4max/issues/7).
+to test the install, run `spleeter -h` in CMD.exe. it should show you usage instructions. if not, you may need to [set spleeter to run as administrator](https://github.com/diracdeltas/spleeter4max/issues/7) or try [the instructions in this thread](https://github.com/diracdeltas/spleeter4max/issues/8).
 
 ### macOS steps:
 
@@ -64,7 +64,7 @@ you could also try https://pypi.org/help/#tls-deprecation to get some more usefu
 
 it's possible the issue is pip needs to be upgraded, which can be done using https://stackoverflow.com/questions/49748063/pip-install-fails-for-every-package-could-not-find-a-version-that-satisfies.
 
-## spleeter fails with command not found
+### spleeter fails with command not found
 
 this might be because spleeter is not installed in a path that Max recognizes. on MacOS try entering this in terminal:
 
@@ -73,6 +73,12 @@ ln -s $(which spleeter) /usr/local/bin/spleeter
 ```
 
 on Windows, you might need to go to `C:\Program Files\Python37\Scripts`, right click on spleeter, select Properties, and under Compatibility enable `Run this program as an administrator` (https://github.com/diracdeltas/spleeter4max/issues/7). 
+
+if it's still not working on Windows, see advice in https://github.com/diracdeltas/spleeter4max/issues/8.
+
+### max console says it can't find a .js file
+
+make sure spleeter-native.amxd is in the spleeter-native directory. it cannot be moved out of this directory or else it will break, but you can move the entire directory.
 
 ### it not working and i can't figure out why
 
