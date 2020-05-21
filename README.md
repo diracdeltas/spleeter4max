@@ -12,11 +12,20 @@ note that all instructions were tested with Max 8.1 and may not work for earlier
 ### windows steps:
 
 1. install ffmpeg following the instructions in https://github.com/adaptlearning/adapt_authoring/wiki/Installing-FFmpeg#installing-ffmpeg-in-windows
+
+> :white_check_mark: to test, run `ffmpeg` in CMD.exe, if there is no output something is wrong
+
 2. install **python 3.7** from https://www.python.org/downloads/release/python-377/ and disable the "path length variable limit" option when you get to the end of the install process
+
+> :white_check_mark: to test, run `python -V` or `py -V` in CMD.exe, if there is no output or something other than `Python 3.7.X` then something is wrong
+
 3. open windows environment variable editor and remove `.JS;` from PATHEXT (https://support.shotgunsoftware.com/hc/en-us/articles/114094235653-Setting-global-environment-variables-on-Windows). on some systems you may need to restart for these changes to take effect.
+
+> :white_check_mark: to test, run `echo %pathext%` in CMD.exe and make sure `.JS` is not there
+
 4. open CMD.exe and type `pip install spleeter`
 
-to test the install, run `spleeter -h` in CMD.exe. it should show you usage instructions. if not, you may need to [set spleeter to run as administrator](https://github.com/diracdeltas/spleeter4max/issues/7) or try [the instructions in this thread](https://github.com/diracdeltas/spleeter4max/issues/8).
+> :white_check_mark: to test, run `spleeter -h` in CMD.exe. it should show you usage instructions. if not, you may need to [set spleeter to run as administrator](https://github.com/diracdeltas/spleeter4max/issues/7) or try [the instructions in this thread](https://github.com/diracdeltas/spleeter4max/issues/8).
 
 ### macOS steps:
 
