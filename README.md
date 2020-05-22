@@ -4,12 +4,16 @@ ableton max device for separating a clip into stems (vocals, bass, drums, other)
 
 video tutorial: https://youtu.be/4pcJoI5CUOA
 
-download link:
-https://www.dropbox.com/s/cn90sqpx3cuzttb/spleeter.zip?dl=0 (backup download link: https://github.com/diracdeltas/spleeter4max/releases/download/1.2/spleeter.zip)
+## download links:
+
+there are two options for installing spleeter for max:
+
+* spleeter with docker (requires windows professional and macos > 10.12, but is easier to install for non-technical users): https://www.dropbox.com/s/cn90sqpx3cuzttb/spleeter.zip?dl=0 (backup download link: https://github.com/diracdeltas/spleeter4max/releases/download/1.2/spleeter.zip)
+* spleeter-native (doesn't require docker and is faster, but potentially harder to install): https://github.com/diracdeltas/spleeter4max/blob/feature/native-spleeter/README.md#spleeter-for-max-native-version
 
 ## before you start
 
-if you would rather install python/pip/ffmpeg than docker, it's better to use [spleeter for max native](https://github.com/diracdeltas/spleeter4max/releases/tag/1.3-native), which is faster and takes less RAM. after downloading spleeter-native, skip the rest of the instructions and go to https://github.com/diracdeltas/spleeter4max/blob/feature/native-spleeter/README.md#before-you-start instead.
+**NOTE: the rest of this page assumes you are using spleeter with docker. if you are using spleeter-native instead, [see instructions here](https://github.com/diracdeltas/spleeter4max/blob/feature/native-spleeter/README.md#spleeter-for-max-native-version)**
 
 otherwise install Docker from https://www.docker.com/products/docker-desktop (it's
 free!).
