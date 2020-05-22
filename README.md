@@ -5,6 +5,10 @@ other) **using an existing installation of spleeter**. if you aren't able to
 install spleeter, check out
 https://github.com/diracdeltas/spleeter4max#spleeter-for-max instead for the version that uses docker.
 
+## download link
+
+https://github.com/diracdeltas/spleeter4max/releases/tag/1.3-native (spleeter-native.zip)
+
 ## before you start
 
 note that all instructions were tested with Max 8.1 and may not work for earlier versions of Max.
@@ -26,6 +30,8 @@ note that all instructions were tested with Max 8.1 and may not work for earlier
 4. open CMD.exe and type `pip install spleeter`
 
 > :white_check_mark: to test, run `spleeter -h` in CMD.exe. it should show you usage instructions. if not, you may need to [set spleeter to run as administrator](https://github.com/diracdeltas/spleeter4max/issues/7) or try [the instructions in this thread](https://github.com/diracdeltas/spleeter4max/issues/8).
+
+if you want to verify everything is installed on windows, download https://raw.githubusercontent.com/diracdeltas/spleeter4max/feature/native-spleeter/check-install.py to your home directory, open CMD.exe, and type `py check-install.py` or `python check-install.py`.
 
 ### macOS steps:
 
