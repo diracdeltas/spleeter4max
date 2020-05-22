@@ -7,11 +7,11 @@ https://github.com/diracdeltas/spleeter4max#spleeter-for-max instead for the ver
 
 ## download link
 
-https://github.com/diracdeltas/spleeter4max/releases/tag/1.3-native (spleeter-native.zip)
+https://github.com/diracdeltas/spleeter4max/releases/download/1.3.1-native/spleeter-native.zip
 
 ## before you start
 
-note that all instructions were tested with Max 8.1 and may not work for earlier versions of Max.
+note that all instructions were tested with Max 8.1 and will not work for earlier versions of Max.
 
 ### windows steps:
 
