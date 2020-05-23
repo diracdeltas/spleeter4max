@@ -35,11 +35,11 @@ const showDir = (dir) => {
     Max.post(`Unsupported platform: ${process.platform}`)
   }
   execSync(`${opener} "${dir}"`)
-  Max.outlet('set', `Highlight a clip; then press the button to start.`)
+  Max.outlet('set', `Select a clip; then press the button to start.`)
 }
 
 const runSpleeter = (filename) => {
-  const cmd = `spleeter separate -i "${filename}" -o "${__dirname}" -p spleeter:4stems`
+  const cmd = `spleeter separate -i "${filename}" -o "${__dirname}" -p spleeter:4stems-16kHz`
   Max.outlet('set', `Spleeter is running. This may take a minute...`)
   Max.post(cmd)
 
