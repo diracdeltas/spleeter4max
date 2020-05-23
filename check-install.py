@@ -8,11 +8,10 @@ import subprocess
 print("Checking install...")
 
 operating_system = platform.system()
+isWin = operating_system == 'Windows'
+isMac = operating_system == 'Darwin'
 
-if operating_system != "Windows":
-    print("This script doesn't support your OS.")
-
-if operating_system == "Windows":
+if isWin or isMac:
     ### 1
     # check FFMPEG is installed
     ffmpeg_result = subprocess.run(['ffmpeg'], capture_output=True).stderr.decode('utf-8')
@@ -38,10 +37,11 @@ if operating_system == "Windows":
 
     ### 3
     # check PATHEXT env variable doesn't have .JS
-    path_ext = os.environ['PATHEXT']
+    if isWin:
+        path_ext = os.environ['PATHEXT']
 
-    if ".JS;" in path_ext:
-        print("(Step 3) You may need to remove .JS from PATHEXT")
+        if ".JS;" in path_ext:
+            print("(Step 3) You may need to remove .JS from PATHEXT")
 
     ### 4
     # check spleeter install
@@ -54,7 +54,9 @@ if operating_system == "Windows":
     # we'll get an error if spleeter has been set to 'Run as administrator'
     except OSError as err:
         print("OS error: {0}".format(err))
-        print("... you may need admin privileges, try running [spleeter -h] in CMD.exe (no brackets) and see if there is output")
+        if isWin:
+            print("... you may need admin privileges, try running [spleeter -h] in CMD.exe (no brackets) and see if there is output")
         quit()
-
-print("Done. If no errors printed, you might be good to go!")
+    print("Done. If no errors printed, you might be good to go! Make sure Ableton is 10.1+ and Max is 8.1+.")
+else:
+    print('Sorry, your operating system is not supported.')
