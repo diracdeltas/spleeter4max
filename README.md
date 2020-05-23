@@ -114,8 +114,6 @@ try opening up the max console in order to get more useful error messages. instr
 3. click the button to run spleeter. you should see a bunch of console messages.
 <img width="663" alt="Screen Shot 2020-04-24 at 11 35 04 PM" src="https://user-images.githubusercontent.com/549654/80273267-919d5100-8685-11ea-9453-bfd2c7cc4f6a.png">
 
-if this doesn't seem helpful, you could try this pre-release version which has better error messages: https://github.com/diracdeltas/spleeter4max/releases/tag/1.3.1-native
-
 ### can i run this in other DAWs?
 
 unfortunately not right now
