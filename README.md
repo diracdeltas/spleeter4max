@@ -31,7 +31,7 @@ note that all instructions were tested with Max 8.1 and will not work for earlie
 
 > :white_check_mark: to test, run `spleeter -h` in CMD.exe. it should show you usage instructions. if not, you may need to [set spleeter to run as administrator](https://github.com/diracdeltas/spleeter4max/issues/7) or try [the instructions in this thread](https://github.com/diracdeltas/spleeter4max/issues/8).
 
-if you want to verify everything is installed on windows, download https://raw.githubusercontent.com/diracdeltas/spleeter4max/feature/native-spleeter/check-install.py to your home directory, open CMD.exe, and type `py check-install.py` or `python check-install.py`.
+if you want to verify everything is installed on windows, download https://raw.githubusercontent.com/diracdeltas/spleeter4max/feature/native-spleeter/check-install.py to your home directory, open CMD.exe, and run `py check-install.py` or `python check-install.py`.
 
 ### macOS steps:
 
@@ -48,6 +48,8 @@ ln -s $(which spleeter) /usr/local/bin/spleeter
 ```
 
 note: spleeter currently requires **python 3.7** (3.8 will not work)
+
+if you want to verify everything is installed on macos, download https://raw.githubusercontent.com/diracdeltas/spleeter4max/feature/native-spleeter/check-install.py to your home directory, open terminal, and run `./check-install.py`.
 
 ## running
 
