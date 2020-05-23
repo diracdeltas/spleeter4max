@@ -30,7 +30,7 @@ once Docker is installed:
 * Windows 10 64-bit: Pro, Enterprise, or Education; must be able to enable Hyper-V and Containers Windows features. UPDATE (5/16/20): it's now possible to install [Docker on Windows Home](https://www.docker.com/blog/docker-desktop-for-windows-home-is-here/) by joining the Windows insider program.
 * Mac hardware must be a 2010 or a newer model / macOS must be version 10.13 or newer
 * At least 8GB, preferably at least 16GB of RAM
-* Ableton 10+ and Max for Live 8.1+. (May work on earlier versions but I haven't tried it.)
+* Ableton 10.1+ and Max for Live 8.1+. (May work on earlier versions but I haven't tried it.)
 
 ## running
 
@@ -52,7 +52,7 @@ i haven't tried it but apparently you can at least run docker if you opt into th
 
 did you already do the steps in https://github.com/diracdeltas/spleeter4max#before-you-start? if so keep reading.
 
-unfortunately this plugin may not work with versions earlier than Ableton 10 / Max 8.1 :(.
+unfortunately this plugin may not work with versions earlier than Ableton 10.1 / Max 8.1 :(.
 
 ### the start button disappears, then nothing happens
 
