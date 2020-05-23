@@ -35,7 +35,7 @@ const showDir = (dir) => {
     Max.post(`Unsupported platform: ${process.platform}`)
   }
   execSync(`${opener} "${dir}"`)
-  Max.outlet('set', `Highlight a clip; then press the button to start.`)
+  Max.outlet('set', `Select a clip; then press the button to start.`)
 }
 
 const startDocker = (filename) => {
@@ -61,7 +61,7 @@ const runSpleeterDocker = (filename) => {
     input: path.dirname(filename),
     model: path.join(__dirname, 'pretrained_models')
   }
-  const cmd = `docker run --name spleeter -v "${env.input}":/input -v "${env.model}":/model -e MODEL_PATH=/model researchdeezer/spleeter:3.7 separate -i "/input/${path.basename(filename)}" -o /output -p spleeter:4stems`
+  const cmd = `docker run --name spleeter -v "${env.input}":/input -v "${env.model}":/model -e MODEL_PATH=/model researchdeezer/spleeter:3.7 separate -i "/input/${path.basename(filename)}" -o /output -p spleeter:4stems-16kHz`
   Max.outlet('set', `Spleeter is running. This may take a minute...`)
   Max.post(cmd)
 
@@ -69,7 +69,7 @@ const runSpleeterDocker = (filename) => {
   exec(cmd, (err, stdout, stderr) => {
     if (err) {
       Max.post(`Error running Spleeter: ${err.message}`)
-      Max.outlet('set', 'Spleeter could not run. Try increasing your Docker memory limit.')
+      Max.outlet('set', 'Spleeter failed. Make sure Docker can access your audio files and has enough memory.')
       done()
       return
     }
