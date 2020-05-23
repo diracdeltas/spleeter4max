@@ -7,7 +7,7 @@ https://github.com/diracdeltas/spleeter4max#spleeter-for-max instead for the ver
 
 ## download link
 
-https://github.com/diracdeltas/spleeter4max/releases/download/1.3.1-native/spleeter-native.zip
+https://github.com/diracdeltas/spleeter4max/releases/download/1.4-native/spleeter-native.zip
 
 ## before you start
 
