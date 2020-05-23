@@ -11,7 +11,7 @@ https://github.com/diracdeltas/spleeter4max/releases/download/1.4-native/spleete
 
 ## before you start
 
-note that all instructions were tested with Max 8.1 and will not work for earlier versions of Max.
+all instructions were tested with Max 8.1 / Ableton 10.1 and will not work for earlier versions.
 
 ### windows steps:
 
