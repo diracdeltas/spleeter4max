@@ -1,0 +1,23 @@
+{
+  "name": "spleeter-js",
+  "version": "0.0.1",
+  "description": "ableton max device for separating a clip into stems (vocals, bass, drums, other).",
+  "main": "spleeter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diracdeltas/spleeter4max.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diracdeltas/spleeter4max/issues"
+  },
+  "homepage": "https://github.com/diracdeltas/spleeter4max#readme",
+  "dependencies": {
+    "@tensorflow/tfjs-node": "^1.7.4",
+    "audio-context": "^1.0.3"
+  }
+}

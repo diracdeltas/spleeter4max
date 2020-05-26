@@ -2,4 +2,6 @@ output/
 pretrained_models/
 .DS_Store
 spleeter/
+spleeter-native/
 *.zip
+node_modules/
