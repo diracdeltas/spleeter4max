@@ -1,18 +1,19 @@
-import * as tf from '@tensorflow/tfjs-node'
 const path = require('path')
 const Max = require('max-api')
+Max.post(`Loaded the ${path.basename(__filename)} script`)
+
+const tf = require('@tensorflow/tfjs-node')
+Max.post('loaded tensorflow')
 const fs = require('fs')
 const { execSync } = require('child_process')
 const { mySTFT, myISTFT } = require('./stft')
+
 const done = () => {
   Max.outlet('spleeterDone')
 }
 const audioContext = require('audio-context')
 const aud = {}
 
-Max.post(`Loaded the ${path.basename(__filename)} script`)
-// Docker's default path may not be in Max Node's env path
-process.env.PATH = [process.env.PATH, '/usr/local/bin'].join(':')
 Max.outlet('bang')
 
 // Use the 'addHandler' function to register a function for a particular
@@ -45,6 +46,10 @@ const showDir = (dir) => {
 
 const start = async (filename) => {
   Max.outlet('set', 'Running, this may take a while...')
+  const correctFilename = path.basename(filename).split('.').slice(0, -1).join('.')
+  const outputFilename = path.join(__dirname, correctFilename)
+  aud.base_name = outputFilename
+
   try {
     await run(filename)
   } catch (e) {
@@ -52,9 +57,7 @@ const start = async (filename) => {
     Max.post(`ERROR: ${e}`)
     return
   }
-  const correctFilename = path.basename(filename).split('.').slice(0, -1).join('.')
-  const outputFilename = path.join(__dirname, correctFilename)
-  aud.base_name = outputFilename
+
   showDir(outputFilename)
   done()
 }
