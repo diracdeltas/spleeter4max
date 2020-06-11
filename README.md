@@ -11,7 +11,7 @@ https://github.com/diracdeltas/spleeter4max/releases/download/1.4-native/spleete
 
 ## before you start
 
-all instructions were tested with Max 8.1 / Ableton 10.1 and will not work for earlier versions.
+all instructions were tested with Max 8.1 / Ableton 10.1 and will not work for earlier versions. also your CPU must [support AVX](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions) - unfortunately this excludes older computers like ~2010 Macbooks.
 
 ### windows steps:
 
