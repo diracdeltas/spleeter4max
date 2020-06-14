@@ -31,6 +31,8 @@ all instructions were tested with Max 8.1 / Ableton 10.1 and will not work for e
 
 > :white_check_mark: to test, run `spleeter -h` in CMD.exe. it should show you usage instructions. if not, you may need to [set spleeter to run as administrator](https://github.com/diracdeltas/spleeter4max/issues/7) or try [the instructions in this thread](https://github.com/diracdeltas/spleeter4max/issues/8).
 
+5. you may need to then run `pip install numba==0.48.0`
+
 if you want to verify everything is installed on windows, download https://raw.githubusercontent.com/diracdeltas/spleeter4max/feature/native-spleeter/check-install.py to your home directory, open CMD.exe, and run `py check-install.py` or `python check-install.py`.
 
 ### macOS steps:
@@ -46,6 +48,7 @@ pip3 install spleeter
 ```
 ln -s $(which spleeter) /usr/local/bin/spleeter
 ```
+4. you may need to then run `pip3 install numba==0.48.0`
 
 note: spleeter currently requires **python 3.7** (3.8 will not work)
 
