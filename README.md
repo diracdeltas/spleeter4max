@@ -50,7 +50,7 @@ ln -s $(which spleeter) /usr/local/bin/spleeter
 ```
 4. you may need to then run `pip3 install numba==0.48.0`
 
-note: spleeter currently requires **python 3.7** (3.8 will not work)
+note for existing python users: spleeter currently requires **python 3.7** (3.6 may work too)
 
 if you want to verify everything is installed on macos, download https://raw.githubusercontent.com/diracdeltas/spleeter4max/feature/native-spleeter/check-install.py to your home directory, open terminal, and run `./check-install.py`.
 
