@@ -38,6 +38,7 @@ if you want to verify everything is installed on windows, download https://raw.g
 ### macOS steps:
 
 1. install homebrew: https://brew.sh/
+
 2. open terminal and install python3.7/ffmpeg/spleeter with the following commands:
 ```
 brew install python@3.7
@@ -46,10 +47,12 @@ brew install ffmpeg
 pip3 install spleeter
 ```
 Note: if you already have Python 3.7+ installed from Homebrew, you may need to run `brew unlink python3` first.
+
 3. on some versions of MacOS, spleeter gets installed somewhere other than `/usr/local/bin/spleeter`. you can check this by typing `which spleeter` into the terminal. if this is the case, enter this into the terminal to fix the location:
 ```
 ln -s $(which spleeter) /usr/local/bin/spleeter
 ```
+
 4. (PROBABLY NOT NEEDED ANYMORE) run `pip3 install numba==0.48.0`
 
 note for existing python users: spleeter currently requires **python 3.7** (3.6 may work too)
