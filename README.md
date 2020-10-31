@@ -15,7 +15,7 @@ all instructions were tested with Max 8.1 / Ableton 10.1 and will not work for e
 
 ### windows steps:
 
-1. install ffmpeg following the instructions in https://github.com/adaptlearning/adapt_authoring/wiki/Installing-FFmpeg#installing-ffmpeg-in-windows. the download link to ffmpeg may be broken; if so, use https://web.archive.org/web/20200918193047/https://ffmpeg.zeranoe.com/builds/ instead.
+1. install ffmpeg following the instructions in https://github.com/adaptlearning/adapt_authoring/wiki/Installing-FFmpeg#installing-ffmpeg-in-windows.
 
 > :white_check_mark: to test, run `ffmpeg` in CMD.exe, if there is no output something is wrong
 
