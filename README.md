@@ -27,7 +27,7 @@ all instructions were tested with Max 8.1 / Ableton 10.1 and will not work for e
 
 > :white_check_mark: to test, run `echo %pathext%` in CMD.exe and make sure `.JS` is not there
 
-4. open CMD.exe and type `pip3 install spleeter==1.5.3` (hit enter), `pip3 install numba==0.48.0` (hit enter), `pip3 install numpy==1.18.5` (hit enter)
+4. open CMD.exe and type `pip3 install spleeter` (hit enter)
 
 > :white_check_mark: to test, run `spleeter -h` in CMD.exe. it should show you usage instructions. if not, you may need to [set spleeter to run as administrator](https://github.com/diracdeltas/spleeter4max/issues/7) or try [the instructions in this thread](https://github.com/diracdeltas/spleeter4max/issues/8).
 
@@ -42,9 +42,7 @@ if you want to verify everything is installed on windows, download https://raw.g
 brew install python@3.7
 brew link --force python@3.7
 brew install ffmpeg
-pip3 install spleeter==1.5.3
-pip3 install numba==0.48.0
-pip3 install numpy==1.18.5
+pip3 install spleeter
 ```
 Note: if you already have Python 3.7+ installed from Homebrew, you may need to run `brew unlink python3` first.
 
