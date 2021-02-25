@@ -39,7 +39,7 @@ const showDir = (dir) => {
 }
 
 const runSpleeter = (filename) => {
-  const cmd = `spleeter separate -i "${filename}" -o "${__dirname}" -p spleeter:4stems-16kHz`
+  const cmd = `spleeter separate -o "${__dirname}" -p spleeter:4stems-16kHz "${filename}"`
   Max.outlet('set', `Spleeter is running. This may take a minute...`)
   Max.post(cmd)
 
