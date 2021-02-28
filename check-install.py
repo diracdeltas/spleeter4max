@@ -46,9 +46,9 @@ if isWin or isMac:
     ### 4
     # check spleeter install
     try:
-        spleeter_result = subprocess.run(["spleeter", "-h"], capture_output=True).stdout.decode('utf-8')
+        spleeter_result = subprocess.run(["spleeter", "--help"], capture_output=True).stdout.decode('utf-8')
 
-        if "usage: spleeter" not in spleeter_result:
+        if "usage: spleeter" not in spleeter_result.lower():
             print("(Step 4) Spleeter may be installed incorrectly.")
 
     # we'll get an error if spleeter has been set to 'Run as administrator'
