@@ -11,7 +11,7 @@ https://github.com/diracdeltas/spleeter4max/releases/download/1.5/spleeter-nativ
 
 ## before you start
 
-all instructions were tested with Max 8.1 / Ableton 10.1 and will not work for earlier versions. also your CPU must [support AVX](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions) - unfortunately this excludes older computers like ~2010 Macbooks.
+all instructions were tested with Max 8.1 / Ableton 10.1 and will not work for earlier versions. also your CPU must [support AVX](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions) - unfortunately this excludes older computers like ~2010 Macbooks. **M1 Macs are NOT supported at this time. See https://github.com/diracdeltas/spleeter4max/issues/58 for more details.**
 
 ### windows steps:
 
