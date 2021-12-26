@@ -39,12 +39,11 @@ if you want to verify everything is installed on windows, download https://raw.g
 
 2. open terminal and install python3.7/ffmpeg/spleeter with the following commands:
 ```
-brew install python@3.7
-brew link --force python@3.7
+brew install python
 brew install ffmpeg
-pip3 install spleeter==2.1
+pip3 install spleeter==2.3
 ```
-Note: if you already have Python 3.7+ installed from Homebrew, you may need to run `brew unlink python3` first.
+Note: spleeter supports python 3.6-3.9.
 
 3. on some versions of MacOS, spleeter gets installed somewhere other than `/usr/local/bin/spleeter`. you can check this by typing `which spleeter` into the terminal. if this is the case, enter this into the terminal to fix the location:
 ```
@@ -77,7 +76,7 @@ this may be because spleeter can't find what it's supposed to be splitting in th
 
 ### 'pip(3) install spleeter' is failing
 
-try `python -m pip install spleeter==2.1` or `python3 -m pip install spleeter==2.1` to see if that works for some reason.
+try `python -m pip install spleeter==2.3` or `python3 -m pip install spleeter==2.3` to see if that works for some reason.
 
 open terminal/CMD.exe and type `pip --version` or `pip3 --version` to make sure you have the version with python 3.7. if not, you need to install python 3.7 with the instructions above.
 
