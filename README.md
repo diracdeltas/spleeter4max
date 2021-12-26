@@ -39,11 +39,11 @@ if you want to verify everything is installed on windows, download https://raw.g
 
 2. open terminal and install python3/ffmpeg/spleeter with the following commands:
 ```
-brew install python
+brew install python@3.9
 brew install ffmpeg
 pip3 install spleeter==2.3
 ```
-Note: spleeter supports python 3.6-3.9.
+Note: spleeter supports python 3.6-3.9. If you previously installed a different version, make sure `python3` is mapped to one of the supported versions.
 
 3. on some versions of MacOS, spleeter gets installed somewhere other than `/usr/local/bin/spleeter`. you can check this by typing `which spleeter` into the terminal. if this is the case, enter this into the terminal to fix the location:
 ```
