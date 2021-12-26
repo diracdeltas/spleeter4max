@@ -21,12 +21,10 @@ if isWin or isMac:
         print("(Step 1) ffmpeg may not be installed correctly.")
 
     ### 2
-    # check python version is 3.7.X and 64 bit
+    # check python version is 3.9.X and 64 bit
     python_version = platform.python_version()
 
-    python_major_version = python_version[0]
-
-    if python_major_version != "3":
+    if not python_version.startswith("3.9."):
         print("(Step 2) Your installed python version may be incorrect, I see " + python_version)
 
     python_32_or_64_bit = struct.calcsize("P") * 8

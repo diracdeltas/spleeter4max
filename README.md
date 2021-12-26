@@ -19,15 +19,15 @@ all instructions were tested with Max 8.1 / Ableton 10.1 and will not work for e
 
 > :white_check_mark: to test, run `ffmpeg` in CMD.exe or Powershell after restarting the shell; if there is no output something is wrong.
 
-2. install **python 3.7** from https://www.python.org/downloads/release/python-3712/. in the installer, make sure to enable the setting that adds Python to your path and disable the "path length variable limit" option when you get to the end of the install process.
+2. install the latest **python 3.9** windows installer from https://www.python.org/downloads/. in the installer, make sure to enable the setting that adds Python to your path and disable the "path length variable limit" option when you get to the end of the install process.
 
-> :white_check_mark: to test, run `python -V` or `py -V` in CMD.exe, if there is no output or something other than `Python 3.7.X` then something is wrong
+> :white_check_mark: to test, run `python -V` or `py -V` in CMD.exe, if there is no output or something other than `Python 3.9.X` then something is wrong
 
 3. open windows environment variable editor and remove `.JS;` from PATHEXT follwing [these instructions](https://web.archive.org/web/20201111203134/https://support.shotgunsoftware.com/hc/en-us/articles/114094235653-Setting-global-environment-variables-on-Windows). on some systems you may need to restart for these changes to take effect.
 
 > :white_check_mark: to test, run `echo %pathext%` in CMD.exe and make sure `.JS` is not there
 
-4. open CMD.exe and type `pip3 install spleeter==2.1` (hit enter)
+4. open CMD.exe and type `pip3 install spleeter==2.3` (hit enter)
 
 > :white_check_mark: to test, run `spleeter -h` in CMD.exe. it should show you usage instructions. if not, you may need to [set spleeter to run as administrator](https://github.com/diracdeltas/spleeter4max/issues/7) or try [the instructions in this thread](https://github.com/diracdeltas/spleeter4max/issues/8).
 
@@ -77,7 +77,7 @@ this may be because spleeter can't find what it's supposed to be splitting in th
 
 try `python -m pip install spleeter==2.3` or `python3 -m pip install spleeter==2.3` to see if that works for some reason.
 
-open terminal/CMD.exe and type `pip --version` or `pip3 --version` to make sure you have the version with python 3.7. if not, you need to install python 3.7 with the instructions above.
+open terminal/CMD.exe and type `pip --version` or `pip3 --version` to make sure you have the version with python 3.9. if not, you need to install python 3.9 with the instructions above.
 
 you could also try https://pypi.org/help/#tls-deprecation to get some more useful error messages.
 
@@ -91,7 +91,7 @@ this might be because spleeter is not installed in a path that Max recognizes. o
 ln -s $(which spleeter) /usr/local/bin/spleeter
 ```
 
-on Windows, you might need to go to `C:\Program Files\Python37\Scripts`, right click on spleeter, select Properties, and under Compatibility enable `Run this program as an administrator` (https://github.com/diracdeltas/spleeter4max/issues/7). 
+on Windows, you might need to go to `C:\Program Files\Python39\Scripts`, right click on spleeter, select Properties, and under Compatibility enable `Run this program as an administrator` (https://github.com/diracdeltas/spleeter4max/issues/7).
 
 if it's still not working on Windows, see advice in https://github.com/diracdeltas/spleeter4max/issues/8.
 
