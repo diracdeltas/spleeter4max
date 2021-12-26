@@ -40,6 +40,7 @@ if you want to verify everything is installed on windows, download https://raw.g
 2. open terminal and install python3/ffmpeg/spleeter with the following commands:
 ```
 brew install python@3.9
+brew link --force python@3.9
 brew install ffmpeg
 pip3 install spleeter==2.3
 ```
@@ -49,8 +50,6 @@ Note: spleeter supports python 3.6-3.9. If you previously installed a different 
 ```
 ln -s $(which spleeter) /usr/local/bin/spleeter
 ```
-
-note for existing python users: spleeter currently requires **python 3.7** (3.6 may work too)
 
 if you want to verify everything is installed on macos, download https://raw.githubusercontent.com/diracdeltas/spleeter4max/feature/native-spleeter/check-install.py to your home directory, open terminal, and run `./check-install.py`.
 
