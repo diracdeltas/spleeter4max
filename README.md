@@ -19,7 +19,7 @@ all instructions were tested with Max 8.1 / Ableton 10.1 and will not work for e
 
 > :white_check_mark: to test, run `ffmpeg` in CMD.exe, if there is no output something is wrong
 
-2. install **python 3.7** from https://www.python.org/downloads/release/python-377/. in the installer, make sure to enable the setting that adds Python to your path and disable the "path length variable limit" option when you get to the end of the install process.
+2. install **python 3.7** from https://www.python.org/downloads/release/python-3712/. in the installer, make sure to enable the setting that adds Python to your path and disable the "path length variable limit" option when you get to the end of the install process.
 
 > :white_check_mark: to test, run `python -V` or `py -V` in CMD.exe, if there is no output or something other than `Python 3.7.X` then something is wrong
 
@@ -37,7 +37,7 @@ if you want to verify everything is installed on windows, download https://raw.g
 
 1. install homebrew: https://brew.sh/
 
-2. open terminal and install python3.7/ffmpeg/spleeter with the following commands:
+2. open terminal and install python3/ffmpeg/spleeter with the following commands:
 ```
 brew install python
 brew install ffmpeg

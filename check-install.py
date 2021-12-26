@@ -25,9 +25,8 @@ if isWin or isMac:
     python_version = platform.python_version()
 
     python_major_version = python_version[0]
-    python_minor_version = python_version[2]
 
-    if python_major_version != "3" or python_minor_version != "7":
+    if python_major_version != "3":
         print("(Step 2) Your installed python version may be incorrect, I see " + python_version)
 
     python_32_or_64_bit = struct.calcsize("P") * 8
