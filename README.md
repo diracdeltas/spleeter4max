@@ -15,15 +15,15 @@ all instructions were tested with Max 8.1 / Ableton 10.1 and will not work for e
 
 ### windows steps:
 
-1. install ffmpeg following the instructions in https://github.com/adaptlearning/adapt_authoring/wiki/Installing-FFmpeg#installing-ffmpeg-in-windows.
+1. install ffmpeg following the instructions in https://github.com/diracdeltas/spleeter4max/wiki/Installing-ffmpeg-on-Windows.
 
-> :white_check_mark: to test, run `ffmpeg` in CMD.exe, if there is no output something is wrong
+> :white_check_mark: to test, run `ffmpeg` in CMD.exe or Powershell after restarting the shell; if there is no output something is wrong.
 
 2. install **python 3.7** from https://www.python.org/downloads/release/python-3712/. in the installer, make sure to enable the setting that adds Python to your path and disable the "path length variable limit" option when you get to the end of the install process.
 
 > :white_check_mark: to test, run `python -V` or `py -V` in CMD.exe, if there is no output or something other than `Python 3.7.X` then something is wrong
 
-3. open windows environment variable editor and remove `.JS;` from PATHEXT (https://support.shotgunsoftware.com/hc/en-us/articles/114094235653-Setting-global-environment-variables-on-Windows). on some systems you may need to restart for these changes to take effect.
+3. open windows environment variable editor and remove `.JS;` from PATHEXT follwing [these instructions](https://web.archive.org/web/20201111203134/https://support.shotgunsoftware.com/hc/en-us/articles/114094235653-Setting-global-environment-variables-on-Windows). on some systems you may need to restart for these changes to take effect.
 
 > :white_check_mark: to test, run `echo %pathext%` in CMD.exe and make sure `.JS` is not there
 
